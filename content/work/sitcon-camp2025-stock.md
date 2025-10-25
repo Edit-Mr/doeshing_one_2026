@@ -2,7 +2,7 @@
 title: "SITCON Camp 2025 Stock Trading System - 喵券機"
 description: "Full-stack virtual stock trading platform for SITCON Camp 2025. Built with FastAPI, Next.js, and MongoDB, featuring real-time market simulation, Telegram bot integration, and comprehensive RBAC system. Serves 100+ participants with concurrent trading and debt management."
 tags: ["FastAPI", "Next.js", "MongoDB", "Python", "TypeScript", "Telegram Bot", "WebSocket", "Docker", "Redis", "JWT"]
-image: "/images/projects/sitcon-stock.svg"
+image: "https://emtech.cc/static/SITCON-camp-2025/stock.webp"
 github: "https://github.com/sitcon-tw/camp2025-stock"
 demo: "https://t.me/SITCONCamp2025Bot"
 date: "2025-07"
