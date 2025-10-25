@@ -80,7 +80,6 @@ const config: Config = {
               backgroundColor: theme("colors.zinc.100"),
               padding: "0.125rem 0.375rem",
               borderRadius: "0.25rem",
-              fontSize: "0.875em",
               letterSpacing: "0",
               fontSynthesis: "none",
               "-webkit-font-smoothing": "antialiased",
