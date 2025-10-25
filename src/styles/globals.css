@@ -299,6 +299,9 @@
   .prose pre code {
     font-variant-ligatures: normal;
     font-feature-settings: "liga" 1, "calt" 1;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   .prose table {
