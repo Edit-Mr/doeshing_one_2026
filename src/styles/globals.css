@@ -311,6 +311,11 @@
     -moz-osx-font-smoothing: grayscale !important;
   }
 
+  /* 深色模式的 pre code 不要繼承 font-size */
+  .dark .prose pre code {
+    font-size: 0.875em !important;
+  }
+
   .prose table {
     display: block;
     max-width: 100%;
