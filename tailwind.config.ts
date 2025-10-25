@@ -184,7 +184,6 @@ const config: Config = {
               backgroundColor: theme("colors.zinc.800"),
               padding: "0.125rem 0.375rem",
               borderRadius: "0.25rem",
-              fontSize: "0.8888889em",
               letterSpacing: "0",
               fontSynthesis: "none",
               "-webkit-font-smoothing": "antialiased",
