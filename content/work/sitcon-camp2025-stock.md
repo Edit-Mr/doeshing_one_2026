@@ -1111,7 +1111,7 @@ module.exports = {
 **Repository Statistics:**
 - **Total Commits:** 862
 - **Contributors:** 4 developers
-  - KoukeNeko: 556 commits (lead)
+  - KoukeNeko: 556 commits
   - wolf-yuan-6115: 197 commits
   - Dash2100: 93 commits
   - Edit-Mr: 16 commits
