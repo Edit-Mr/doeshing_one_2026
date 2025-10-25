@@ -1110,7 +1110,6 @@ module.exports = {
 
 **Repository Statistics:**
 - **Total Commits:** 862
-- **Your Contribution:** 556 commits (64%)
 - **Contributors:** 4 developers
   - KoukeNeko: 556 commits (lead)
   - wolf-yuan-6115: 197 commits
