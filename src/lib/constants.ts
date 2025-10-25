@@ -105,7 +105,7 @@ export const HOMEPAGE_FEATURED_COUNT = 2;
  * Determines how many posts are loaded in total on the homepage.
  * The first HOMEPAGE_FEATURED_COUNT will be styled as featured cards.
  */
-export const HOMEPAGE_POSTS_FETCH_LIMIT = 6;
+export const HOMEPAGE_POSTS_FETCH_LIMIT = 7;
 
 /**
  * Number of related posts to show in "You might also enjoy" sections
@@ -118,7 +118,7 @@ export const HOMEPAGE_POSTS_FETCH_LIMIT = 6;
  *
  * Controls featured post count across all listing and detail pages for consistent display
  */
-export const RELATED_POSTS_FEATURED_COUNT = 3;
+export const RELATED_POSTS_FEATURED_COUNT = 4;
 
 /**
  * Number of featured projects to display on the homepage
@@ -127,7 +127,7 @@ export const RELATED_POSTS_FEATURED_COUNT = 3;
  * Limits the projects shown in the "Studio Work" section on the homepage.
  * Projects are displayed in a 3-column grid on large screens.
  */
-export const FEATURED_PROJECT_LIMIT = 3;
+export const FEATURED_PROJECT_LIMIT = 4;
 
 /**
  * Number of projects to highlight with large cards on the work page
