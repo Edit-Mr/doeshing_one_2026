@@ -70,7 +70,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const { frontmatter, html, toc } = project;
 
   return (
-    <article className="space-y-10">
+    <article>
       <header className="space-y-6 border border-black/10 bg-white px-6 py-10 shadow-editorial dark:border-white/10 dark:bg-zinc-900">
         <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.35em] text-newspaper-gray dark:text-zinc-400">
           <span>{formatDate(frontmatter.date, "MMM yyyy")}</span>
@@ -115,7 +115,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </header>
 
       {frontmatter.image && frontmatter.showImage !== false ? (
-        <div className="relative w-full overflow-hidden border border-black/10 bg-white shadow-editorial dark:border-white/10 dark:bg-zinc-900">
+        <div className="relative mt-10 w-full overflow-hidden border border-black/10 bg-white shadow-editorial dark:border-white/10 dark:bg-zinc-900">
           <Image
             src={frontmatter.image}
             alt={frontmatter.title}
@@ -128,12 +128,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       ) : null}
 
       {/* Mobile TOC - collapsible, below hero */}
-      <div className="lg:hidden">
+      <div className="mt-10 lg:hidden">
         <TableOfContents items={toc ?? []} collapsible defaultOpen={false} />
       </div>
 
-      <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr),280px]">
-        <div className="min-w-0 overflow-x-hidden">
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr),280px] lg:mt-10">
+        <div className="min-w-0 overflow-x-hidden lg:border-t border-black/10 bg-white py-10 shadow-editorial dark:border-white/10 dark:bg-zinc-900">
           <RenderedMarkdown
             html={html ?? ""}
             className="dropcap prose prose-lg prose-headings:font-serif prose-headings:tracking-tight prose-p:text-newspaper-gray dark:prose-invert"

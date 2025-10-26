@@ -103,7 +103,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const shareUrl = `${baseUrl}/archive/${post.slug}`;
 
   return (
-    <article className="space-y-10 overflow-hidden">
+    <article className="overflow-hidden">
       <header className="space-y-6 border border-black/10 bg-white px-6 py-10 shadow-editorial dark:border-white/10 dark:bg-zinc-900">
         <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.35em] text-newspaper-gray dark:text-zinc-400">
           <span>
@@ -133,7 +133,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       </header>
 
       {post.coverImage && post.showCoverImage !== false ? (
-        <div className="relative w-full overflow-hidden border border-black/10 bg-white shadow-editorial dark:border-white/10 dark:bg-zinc-900">
+        <div className="relative mt-10 w-full overflow-hidden border border-black/10 bg-white shadow-editorial dark:border-white/10 dark:bg-zinc-900">
           <Image
             src={post.coverImage}
             alt={post.title}
@@ -146,12 +146,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       ) : null}
 
       {/* Mobile TOC - collapsible, below hero */}
-      <div className="lg:hidden">
+      <div className="mt-10 lg:hidden">
         <TableOfContents items={toc ?? []} collapsible defaultOpen={false} />
       </div>
 
-      <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr),280px]">
-        <div className="space-y-10 min-w-0">
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr),280px] lg:mt-10">
+        <div className="space-y-10 min-w-0 lg:border-t border-black/10 bg-white shadow-editorial dark:border-white/10 dark:bg-zinc-900">
 
           <RenderedMarkdown
             html={html}
