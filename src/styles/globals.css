@@ -1,6 +1,3 @@
-@import url("https://font.emtech.cc/css/GenRyuMinJP");
-@import url("https://font.emtech.cc/css/GenRyuMinTW");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,7 +5,7 @@
 @layer base {
 
   :root {
-    --font-serif: "GenRyuMinTW", "GenRyuMinJP", "Playfair Display", "Merriweather", "GenRyuMin JP Auto", "GenRyuMin TW Auto", serif;
+    --font-serif: "GenRyuMinTW", "GenRyuMinJP", "Playfair Display", "Merriweather", serif;
     --font-sans: "Inter", "Roboto", sans-serif;
     --font-mono: var(--font-fira-code), monospace;
     --color-ink: #1a1a1a;

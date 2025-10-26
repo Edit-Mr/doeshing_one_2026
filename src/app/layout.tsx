@@ -70,6 +70,8 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+        <link rel="stylesheet" href="https://font.emtech.cc/css/GenRyuMinJP" />
+        <link rel="stylesheet" href="https://font.emtech.cc/css/GenRyuMinTW" />
       </head>
       <body className="min-h-screen overflow-x-hidden bg-newspaper-paper text-newspaper-ink antialiased dark:bg-zinc-900 dark:text-zinc-100" suppressHydrationWarning>
         <ThemeProvider
