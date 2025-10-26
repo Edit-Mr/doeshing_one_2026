@@ -44,7 +44,21 @@ image: "/images/projects/example-project.png"
 # - 路徑相對於 public/ 目錄
 # - 建議尺寸：1200x630px (OpenGraph 標準)
 # - 支援格式：.png, .jpg, .webp, .svg
-# - 如果省略，會使用預設佔位圖
+# - 顯示位置：
+#   - 專案頁面頂部 (hero image) - 可用 showImage 控制
+#   - 社群分享縮圖 (OpenGraph, Twitter Card) - 一定會使用
+# - 如果省略，社群分享會使用預設 OG 圖片
+
+showImage: true
+# 是否在專案內文顯示封面圖片
+# - 值：true 或 false (預設為 true)
+# - true: 封面圖片會顯示在專案頁面頂部
+# - false: 封面圖片只用於社群分享，不在專案內顯示
+# - 使用情境：
+#   - 圖片只想用於社群分享預覽
+#   - 專案內容已經包含相同圖片或更好的展示
+#   - 希望專案頁面更簡潔
+# - 注意：不影響社群分享的 OG 圖片
 
 github: "https://github.com/yourusername/example-project"
 # GitHub 倉庫連結
