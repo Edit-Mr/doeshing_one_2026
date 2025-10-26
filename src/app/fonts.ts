@@ -40,16 +40,16 @@ export const firaCode = localFont({
   weight: "300 700", // Variable font 支援 300-700 字重範圍
 });
 
-// DM Serif Display - 用於 Header masthead
+// DM Serif Display - 用於 Header masthead - WOFF2 compressed
 export const dmSerifDisplay = localFont({
   src: [
     {
-      path: "../../public/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf",
+      path: "../../public/fonts/DM_Serif_Display/DMSerifDisplay-Regular.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../../public/fonts/DM_Serif_Display/DMSerifDisplay-Italic.ttf",
+      path: "../../public/fonts/DM_Serif_Display/DMSerifDisplay-Italic.woff2",
       weight: "400",
       style: "italic",
     },
