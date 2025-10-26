@@ -133,7 +133,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         </header>
 
-        {post.coverImage ? (
+        {post.coverImage && post.showCoverImage !== false ? (
           <div className="relative w-full overflow-hidden border border-black/10 bg-white shadow-editorial dark:border-white/10 dark:bg-zinc-900">
             <Image
               src={post.coverImage}

@@ -62,6 +62,7 @@ export interface BlogPostFrontmatter {
   title: string;
   excerpt: string;
   coverImage?: string;
+  showCoverImage?: boolean; // 控制是否在內文顯示封面圖片，預設為 true
   date: string;
   author: {
     name: string;
@@ -83,6 +84,7 @@ export interface BlogPost {
   excerpt: string;
   content: string;
   coverImage?: string;
+  showCoverImage?: boolean;
   published: boolean;
   publishedAt: Date;
   createdAt: Date;
@@ -273,6 +275,7 @@ async function loadBlogPost(filePath: string): Promise<BlogPost | null> {
       excerpt: frontmatter.excerpt,
       content,
       coverImage: frontmatter.coverImage,
+      showCoverImage: frontmatter.showCoverImage ?? true, // 預設顯示封面圖片
       published: frontmatter.published ?? false,
       publishedAt,
       createdAt: stats.birthtime,

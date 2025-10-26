@@ -52,6 +52,7 @@ export interface ProjectFrontmatter {
   description: string;
   tags: string[];
   image?: string;
+  showImage?: boolean; // 控制是否在內文顯示圖片，預設為 true
   github?: string;
   demo?: string;
   date: string;

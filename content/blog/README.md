@@ -48,6 +48,7 @@ Write your blog post content using Markdown...
 | `title` | string | Yes | Post title |
 | `excerpt` | string | Yes | Brief description for listings and SEO |
 | `coverImage` | string | No | Path to cover image |
+| `showCoverImage` | boolean | No | Whether to display cover image in article (default: true) |
 | `date` | string | Yes | Publication date in YYYY-MM-DD format |
 | `author.name` | string | Yes | Author's name |
 | `author.avatar` | string | No | Path to author avatar image |

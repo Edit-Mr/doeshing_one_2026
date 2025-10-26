@@ -114,7 +114,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </div>
       </header>
 
-      {frontmatter.image ? (
+      {frontmatter.image && frontmatter.showImage !== false ? (
         <div className="relative w-full overflow-hidden border border-black/10 bg-white shadow-editorial dark:border-white/10 dark:bg-zinc-900">
           <Image
             src={frontmatter.image}
