@@ -51,11 +51,11 @@ export function TableOfContents({ items, collapsible = false, defaultOpen = true
       {collapsible ? (
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex w-full items-center justify-between text-xs font-semibold uppercase tracking-[0.35em] text-newspaper-gray dark:text-zinc-400"
+          className="flex w-full items-center justify-between text-xs font-semibold uppercase tracking-[0.35em] text-newspaper-gray transition-colors hover:text-newspaper-ink dark:text-zinc-400 dark:hover:text-zinc-100"
         >
           <span>Contents</span>
           <svg
-            className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+            className={`h-4 w-4 transition-transform duration-300 ease-in-out ${isOpen ? 'rotate-180' : 'rotate-0'}`}
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -68,13 +68,19 @@ export function TableOfContents({ items, collapsible = false, defaultOpen = true
           Contents
         </p>
       )}
-      <nav className={`mt-4 space-y-2 text-sm ${collapsible && !isOpen ? 'hidden' : ''}`}>
+      <nav
+        className={`space-y-2 text-sm overflow-hidden transition-all duration-300 ease-in-out ${
+          collapsible && !isOpen
+            ? 'max-h-0 opacity-0 mt-0'
+            : 'max-h-[1000px] opacity-100 mt-4'
+        }`}
+      >
         {items.map((item) => (
           <a
             key={item.id}
             href={`#${item.id}`}
             onClick={(e) => handleClick(e, item.id)}
-            className="block text-newspaper-gray transition hover:text-newspaper-ink dark:text-zinc-400 dark:hover:text-zinc-100"
+            className="block text-newspaper-gray transition-colors hover:text-newspaper-ink dark:text-zinc-400 dark:hover:text-zinc-100"
             style={{
               marginLeft: `${(item.depth - 2) * 12}px`,
             }}
