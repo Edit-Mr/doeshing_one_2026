@@ -152,7 +152,7 @@
 /* Japanese Hiragana, Katakana unicode-range: U+3040-309F, U+30A0-30FF */
 @font-face {
   font-family: "GenRyuMin JP Auto";
-  src: url("/fonts/GenRyuMin2JP-otf/GenRyuMin2JP-L.otf") format("opentype");
+  src: url("/fonts/GenRyuMin2JP-woff2/GenRyuMin2JP-L.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -161,7 +161,7 @@
 
 @font-face {
   font-family: "GenRyuMin JP Auto";
-  src: url("/fonts/GenRyuMin2JP-otf/GenRyuMin2JP-R.otf") format("opentype");
+  src: url("/fonts/GenRyuMin2JP-woff2/GenRyuMin2JP-R.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -170,7 +170,7 @@
 
 @font-face {
   font-family: "GenRyuMin JP Auto";
-  src: url("/fonts/GenRyuMin2JP-otf/GenRyuMin2JP-M.otf") format("opentype");
+  src: url("/fonts/GenRyuMin2JP-woff2/GenRyuMin2JP-M.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -179,7 +179,7 @@
 
 @font-face {
   font-family: "GenRyuMin JP Auto";
-  src: url("/fonts/GenRyuMin2JP-otf/GenRyuMin2JP-SB.otf") format("opentype");
+  src: url("/fonts/GenRyuMin2JP-woff2/GenRyuMin2JP-SB.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -188,7 +188,7 @@
 
 @font-face {
   font-family: "GenRyuMin JP Auto";
-  src: url("/fonts/GenRyuMin2JP-otf/GenRyuMin2JP-B.otf") format("opentype");
+  src: url("/fonts/GenRyuMin2JP-woff2/GenRyuMin2JP-B.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -198,7 +198,7 @@
 /* Traditional Chinese - will match all CJK characters not in Japanese range */
 @font-face {
   font-family: "GenRyuMin TW Auto";
-  src: url("/fonts/GenRyuMin2TW-otf/GenRyuMin2TW-L.otf") format("opentype");
+  src: url("/fonts/GenRyuMin2TW-woff2/GenRyuMin2TW-L.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -207,7 +207,7 @@
 
 @font-face {
   font-family: "GenRyuMin TW Auto";
-  src: url("/fonts/GenRyuMin2TW-otf/GenRyuMin2TW-R.otf") format("opentype");
+  src: url("/fonts/GenRyuMin2TW-woff2/GenRyuMin2TW-R.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -216,7 +216,7 @@
 
 @font-face {
   font-family: "GenRyuMin TW Auto";
-  src: url("/fonts/GenRyuMin2TW-otf/GenRyuMin2TW-M.otf") format("opentype");
+  src: url("/fonts/GenRyuMin2TW-woff2/GenRyuMin2TW-M.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -225,7 +225,7 @@
 
 @font-face {
   font-family: "GenRyuMin TW Auto";
-  src: url("/fonts/GenRyuMin2TW-otf/GenRyuMin2TW-SB.otf") format("opentype");
+  src: url("/fonts/GenRyuMin2TW-woff2/GenRyuMin2TW-SB.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -234,7 +234,7 @@
 
 @font-face {
   font-family: "GenRyuMin TW Auto";
-  src: url("/fonts/GenRyuMin2TW-otf/GenRyuMin2TW-B.otf") format("opentype");
+  src: url("/fonts/GenRyuMin2TW-woff2/GenRyuMin2TW-B.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;

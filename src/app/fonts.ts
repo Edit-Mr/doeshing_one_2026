@@ -58,41 +58,41 @@ export const dmSerifDisplay = localFont({
   display: "swap",
 });
 
-// Traditional Chinese version (主要使用)
+// Traditional Chinese version (主要使用) - WOFF2 compressed
 export const genRyuMin = localFont({
   src: [
     {
-      path: "../../public/fonts/GenRyuMin2TW-otf/GenRyuMin2TW-EL.otf",
+      path: "../../public/fonts/GenRyuMin2TW-woff2/GenRyuMin2TW-EL.woff2",
       weight: "200",
       style: "normal",
     },
     {
-      path: "../../public/fonts/GenRyuMin2TW-otf/GenRyuMin2TW-L.otf",
+      path: "../../public/fonts/GenRyuMin2TW-woff2/GenRyuMin2TW-L.woff2",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../../public/fonts/GenRyuMin2TW-otf/GenRyuMin2TW-R.otf",
+      path: "../../public/fonts/GenRyuMin2TW-woff2/GenRyuMin2TW-R.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../../public/fonts/GenRyuMin2TW-otf/GenRyuMin2TW-M.otf",
+      path: "../../public/fonts/GenRyuMin2TW-woff2/GenRyuMin2TW-M.woff2",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../../public/fonts/GenRyuMin2TW-otf/GenRyuMin2TW-SB.otf",
+      path: "../../public/fonts/GenRyuMin2TW-woff2/GenRyuMin2TW-SB.woff2",
       weight: "600",
       style: "normal",
     },
     {
-      path: "../../public/fonts/GenRyuMin2TW-otf/GenRyuMin2TW-B.otf",
+      path: "../../public/fonts/GenRyuMin2TW-woff2/GenRyuMin2TW-B.woff2",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../../public/fonts/GenRyuMin2TW-otf/GenRyuMin2TW-H.otf",
+      path: "../../public/fonts/GenRyuMin2TW-woff2/GenRyuMin2TW-H.woff2",
       weight: "800",
       style: "normal",
     },
@@ -101,41 +101,41 @@ export const genRyuMin = localFont({
   display: "swap",
 });
 
-// Japanese version (for Japanese content)
+// Japanese version (for Japanese content) - WOFF2 compressed
 export const genRyuMinJP = localFont({
   src: [
     {
-      path: "../../public/fonts/GenRyuMin2JP-otf/GenRyuMin2JP-EL.otf",
+      path: "../../public/fonts/GenRyuMin2JP-woff2/GenRyuMin2JP-EL.woff2",
       weight: "200",
       style: "normal",
     },
     {
-      path: "../../public/fonts/GenRyuMin2JP-otf/GenRyuMin2JP-L.otf",
+      path: "../../public/fonts/GenRyuMin2JP-woff2/GenRyuMin2JP-L.woff2",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../../public/fonts/GenRyuMin2JP-otf/GenRyuMin2JP-R.otf",
+      path: "../../public/fonts/GenRyuMin2JP-woff2/GenRyuMin2JP-R.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../../public/fonts/GenRyuMin2JP-otf/GenRyuMin2JP-M.otf",
+      path: "../../public/fonts/GenRyuMin2JP-woff2/GenRyuMin2JP-M.woff2",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../../public/fonts/GenRyuMin2JP-otf/GenRyuMin2JP-SB.otf",
+      path: "../../public/fonts/GenRyuMin2JP-woff2/GenRyuMin2JP-SB.woff2",
       weight: "600",
       style: "normal",
     },
     {
-      path: "../../public/fonts/GenRyuMin2JP-otf/GenRyuMin2JP-B.otf",
+      path: "../../public/fonts/GenRyuMin2JP-woff2/GenRyuMin2JP-B.woff2",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../../public/fonts/GenRyuMin2JP-otf/GenRyuMin2JP-H.otf",
+      path: "../../public/fonts/GenRyuMin2JP-woff2/GenRyuMin2JP-H.woff2",
       weight: "800",
       style: "normal",
     },
