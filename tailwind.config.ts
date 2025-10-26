@@ -30,7 +30,15 @@ const config: Config = {
           "Merriweather",
           "serif",
         ],
-        sans: ["Inter", "Roboto", "sans-serif"],
+        sans: [
+          "var(--font-line-seed-tw)",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Noto Sans TC",
+          "Microsoft JhengHei",
+          "sans-serif",
+        ],
         mono: ["var(--font-fira-code)", "monospace"],
       },
       maxWidth: {
