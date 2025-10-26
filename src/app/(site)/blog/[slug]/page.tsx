@@ -38,6 +38,14 @@ export async function generateMetadata({
 
   const url = baseUrl ? `${baseUrl}/blog/${post.slug}` : undefined;
 
+  // Ensure OG image is absolute URL
+  const ogImage = post.coverImage ?? "/images/og-default.svg";
+  const ogImageUrl = ogImage.startsWith("http")
+    ? ogImage
+    : baseUrl
+      ? `${baseUrl}${ogImage}`
+      : ogImage;
+
   return {
     title: post.title,
     description: post.excerpt ?? post.title,
@@ -49,7 +57,20 @@ export async function generateMetadata({
       url,
       publishedTime: post.publishedAt?.toISOString(),
       modifiedTime: post.updatedAt.toISOString(),
-      images: [{ url: post.coverImage ?? "/images/og-default.svg" }],
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt ?? post.title,
+      images: [ogImageUrl],
     },
     alternates: {
       canonical: url,
