@@ -144,34 +144,6 @@ export const genRyuMinJP = localFont({
   display: "swap",
 });
 
-// LINE Seed TW - fallback 字體，確保沒有字符跑到系統預設
-export const lineSeedTW = localFont({
-  src: [
-    {
-      path: "../../public/fonts/LINE Seed TW_ver02/WOFF2/LINESeedTW_OTF_Th.woff2",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/LINE Seed TW_ver02/WOFF2/LINESeedTW_OTF_Rg.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/LINE Seed TW_ver02/WOFF2/LINESeedTW_OTF_Bd.woff2",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/LINE Seed TW_ver02/WOFF2/LINESeedTW_OTF_Eb.woff2",
-      weight: "800",
-      style: "normal",
-    },
-  ],
-  variable: "--font-line-seed-tw",
-  display: "swap",
-});
-
 export const fontVariables = [
   playfair.variable,
   merriweather.variable,
@@ -181,5 +153,4 @@ export const fontVariables = [
   dmSerifDisplay.variable,
   genRyuMin.variable,
   genRyuMinJP.variable,
-  lineSeedTW.variable,
 ].join(" ");

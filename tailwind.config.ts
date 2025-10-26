@@ -31,7 +31,8 @@ const config: Config = {
           "serif",
         ],
         sans: [
-          "var(--font-line-seed-tw)",
+          "Inter",
+          "Roboto",
           "-apple-system",
           "BlinkMacSystemFont",
           "Segoe UI",
