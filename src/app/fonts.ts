@@ -40,6 +40,24 @@ export const firaCode = localFont({
   weight: "300 700", // Variable font 支援 300-700 字重範圍
 });
 
+// DM Serif Display - 用於 Header masthead
+export const dmSerifDisplay = localFont({
+  src: [
+    {
+      path: "../../public/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/DM_Serif_Display/DMSerifDisplay-Italic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+  ],
+  variable: "--font-dm-serif-display",
+  display: "swap",
+});
+
 // Traditional Chinese version (主要使用)
 export const genRyuMin = localFont({
   src: [
@@ -126,12 +144,42 @@ export const genRyuMinJP = localFont({
   display: "swap",
 });
 
+// LINE Seed TW - fallback 字體，確保沒有字符跑到系統預設
+export const lineSeedTW = localFont({
+  src: [
+    {
+      path: "../../public/fonts/LINE Seed TW_ver02/WOFF2/LINESeedTW_OTF_Th.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/LINE Seed TW_ver02/WOFF2/LINESeedTW_OTF_Rg.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/LINE Seed TW_ver02/WOFF2/LINESeedTW_OTF_Bd.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/LINE Seed TW_ver02/WOFF2/LINESeedTW_OTF_Eb.woff2",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+  variable: "--font-line-seed-tw",
+  display: "swap",
+});
+
 export const fontVariables = [
   playfair.variable,
   merriweather.variable,
   inter.variable,
   roboto.variable,
   firaCode.variable,
+  dmSerifDisplay.variable,
   genRyuMin.variable,
   genRyuMinJP.variable,
+  lineSeedTW.variable,
 ].join(" ");

@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --font-serif: var(--font-genryumin), "Playfair Display", "Merriweather", "GenRyuMin JP Auto", "GenRyuMin TW Auto", serif;
-    --font-sans: "Inter", "Roboto", sans-serif;
+    --font-serif: var(--font-genryumin), "Playfair Display", "Merriweather", "GenRyuMin JP Auto", "GenRyuMin TW Auto", var(--font-line-seed-tw), serif;
+    --font-sans: "Inter", "Roboto", var(--font-line-seed-tw), sans-serif;
     --font-mono: var(--font-fira-code), monospace;
     --color-ink: #1a1a1a;
     --color-paper: #fafafa;
@@ -46,7 +46,7 @@
 
   /* Japanese content uses Japanese font variant */
   :lang(ja) {
-    font-family: var(--font-genryumin-jp), var(--font-genryumin), "Playfair Display", "Merriweather", serif;
+    font-family: var(--font-genryumin-jp), var(--font-genryumin), "Playfair Display", "Merriweather", var(--font-line-seed-tw), serif;
   }
 
   /* Ensure CJK characters render properly */

@@ -102,7 +102,7 @@ export default async function HomePage() {
           <span className="text-xs font-semibold uppercase tracking-[0.4em] text-newspaper-gray dark:text-zinc-400">
             {getNewspaperDateline()}
           </span>
-          <h1 className="font-serif text-4xl tracking-tight text-newspaper-ink dark:text-zinc-50 sm:text-5xl md:text-6xl">
+          <h1 className="text-4xl tracking-tight text-newspaper-ink dark:text-zinc-50 sm:text-5xl md:text-6xl" style={{ fontFamily: 'var(--font-dm-serif-display)' }}>
             Doeshing Gazette: Editorial craftsmanship for the modern web
           </h1>
           <p className="max-w-2xl text-base text-newspaper-gray dark:text-zinc-400">

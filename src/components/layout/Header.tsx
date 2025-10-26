@@ -29,7 +29,7 @@ export async function Header() {
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div className="flex flex-col gap-3">
               <Link href="/" className="group inline-flex items-baseline gap-3">
-                <span className="text-3xl font-serif uppercase tracking-tight text-newspaper-ink dark:text-zinc-50 md:text-5xl">
+                <span className="text-3xl uppercase tracking-tight text-newspaper-ink dark:text-zinc-50 md:text-5xl" style={{ fontFamily: 'var(--font-dm-serif-display)' }}>
                   Doeshing Gazette
                 </span>
                 <span className="hidden text-xs font-semibold uppercase tracking-[0.45em] text-newspaper-accent dark:text-red-400 md:inline">
