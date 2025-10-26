@@ -7,6 +7,7 @@ camera: "Sony A7C II"
 lens: "35mm f/1.8"
 tags: ["Seascape", "Dawn", "Taiwan"]
 coverImage: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1600&q=80"
+coverOrientation: "landscape"
 images:
   - src: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1400&q=80"
     alt: "First light over the Pacific with waves breaking in long exposure."

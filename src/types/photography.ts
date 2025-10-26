@@ -29,6 +29,7 @@ export interface PhotoCollectionFrontmatter {
   lens?: string;
   tags?: string[];
   coverImage: string;
+  coverOrientation?: PhotoOrientation;
   featured?: boolean;
   images: PhotoAsset[];
 }

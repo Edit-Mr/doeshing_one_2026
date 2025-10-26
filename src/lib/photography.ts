@@ -105,6 +105,12 @@ export async function loadPhotoCollection(slug: string): Promise<PhotoCollection
               (tag): tag is string => typeof tag === "string",
             )
           : undefined,
+        coverOrientation:
+          record.coverOrientation === "landscape" ||
+          record.coverOrientation === "portrait" ||
+          record.coverOrientation === "square"
+            ? record.coverOrientation
+            : undefined,
         featured:
           typeof record.featured === "boolean" ? record.featured : undefined,
         images,
