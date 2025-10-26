@@ -92,6 +92,7 @@ const nextConfig: NextConfig = {
     "/sitemap.xml": ["./content/**/*"],       // Sitemap 需要所有內容
     "/archive/[slug]": ["./content/blog/**/*"],  // 部落格頁面需要部落格內容
     "/work/[slug]": ["./content/work/**/*"],  // 專案頁面需要專案內容
+    "/gallery/[slug]": ["./content/photography/**/*"], // 攝影作品需要攝影內容
   },
 
   /**
