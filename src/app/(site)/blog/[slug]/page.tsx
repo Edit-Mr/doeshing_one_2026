@@ -55,6 +55,8 @@ export async function generateMetadata({
       description: post.excerpt ?? post.title,
       type: "article",
       url,
+      siteName: "Doeshing — Editorial Portfolio",
+      locale: "zh_TW",
       publishedTime: post.publishedAt?.toISOString(),
       modifiedTime: post.updatedAt.toISOString(),
       images: [
@@ -63,6 +65,7 @@ export async function generateMetadata({
           width: 1200,
           height: 630,
           alt: post.title,
+          type: "image/jpeg",
         },
       ],
     },
