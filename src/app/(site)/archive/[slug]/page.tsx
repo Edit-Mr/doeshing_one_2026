@@ -31,9 +31,15 @@ export async function generateMetadata({
 
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL?.startsWith("http")
     ? process.env.NEXT_PUBLIC_SITE_URL
-    : undefined;
+    : "https://doeshing.one";
 
-  const url = baseUrl ? `${baseUrl}/archive/${post.slug}` : undefined;
+  const url = `${baseUrl}/archive/${post.slug}`;
+
+  // Ensure OG image is absolute URL
+  const ogImage = post.coverImage ?? "/images/og-default.svg";
+  const ogImageUrl = ogImage.startsWith("http")
+    ? ogImage
+    : `${baseUrl}${ogImage}`;
 
   return {
     title: post.title,
@@ -44,10 +50,27 @@ export async function generateMetadata({
       description: post.excerpt ?? post.title,
       type: "article",
       url,
+      siteName: "Doeshing — Editorial Portfolio",
+      locale: "zh_TW",
       publishedTime: post.publishedAt
         ? new Date(post.publishedAt).toISOString()
         : undefined,
       modifiedTime: new Date(post.updatedAt).toISOString(),
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+          type: "image/jpeg",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt ?? post.title,
+      images: [ogImageUrl],
     },
     alternates: {
       canonical: url,
