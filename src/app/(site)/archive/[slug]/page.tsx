@@ -4,7 +4,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BlogGrid } from "@/components/blog/BlogGrid";
 import { ShareButtons } from "@/components/blog/ShareButtons";
-import CommentSection from "@/components/blog/CommentSection";
 import { TableOfContents } from "@/components/blog/TableOfContents";
 import { RenderedMarkdown } from "@/components/mdx/RenderedMarkdown";
 import { Badge } from "@/components/ui/Badge";
@@ -138,7 +137,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           />
           <BlogGrid posts={related} featuredCount={RELATED_POSTS_FEATURED_COUNT} />
         </section>
-        <CommentSection />
 
         <nav className="flex flex-col gap-6 border border-black/10 bg-white px-6 py-6 dark:border-white/10 dark:bg-zinc-900 md:flex-row md:justify-between">
           {adjacent.previous ? (
