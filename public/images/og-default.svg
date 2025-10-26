@@ -1,0 +1,26 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#f5f5f4"/>
+
+  <!-- Border -->
+  <rect x="40" y="40" width="1120" height="550" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+
+  <!-- Inner accent line -->
+  <rect x="60" y="60" width="1080" height="510" fill="none" stroke="#dc2626" stroke-width="1" opacity="0.3"/>
+
+  <!-- Logo/Stamp area -->
+  <circle cx="600" cy="200" r="80" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-dasharray="8 12"/>
+  <circle cx="600" cy="200" r="60" fill="#dc2626" opacity="0.12"/>
+
+  <!-- Site name -->
+  <text x="600" y="320" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="64" font-weight="700" fill="#1a1a1a">Doeshing</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="380" text-anchor="middle" font-family="'Inter', 'Noto Sans TC', sans-serif" font-size="24" fill="#737373" letter-spacing="0.1em">EDITORIAL PORTFOLIO</text>
+
+  <!-- Decorative line -->
+  <line x1="400" y1="450" x2="800" y2="450" stroke="#dc2626" stroke-width="2" opacity="0.5"/>
+
+  <!-- Footer text -->
+  <text x="600" y="520" text-anchor="middle" font-family="'Inter', 'Noto Sans TC', sans-serif" font-size="16" fill="#a3a3a3" letter-spacing="0.2em">CRAFT · PROCESS · REFLECTION</text>
+</svg>

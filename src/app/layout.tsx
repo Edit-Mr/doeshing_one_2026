@@ -37,11 +37,13 @@ export const metadata: Metadata = {
     locale: "zh-TW",
     type: "website",
     siteName,
+    images: [{ url: "/images/og-default.svg" }],
   },
   twitter: {
     card: "summary_large_image",
     title: siteName,
     description: siteDescription,
+    images: ["/images/og-default.svg"],
   },
   category: "technology",
 };
