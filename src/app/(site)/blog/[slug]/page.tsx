@@ -34,9 +34,9 @@ export async function generateMetadata({
 
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL?.startsWith("http")
     ? process.env.NEXT_PUBLIC_SITE_URL
-    : undefined;
+    : "https://doeshing.one";
 
-  const url = baseUrl ? `${baseUrl}/blog/${post.slug}` : undefined;
+  const url = `${baseUrl}/blog/${post.slug}`;
 
   // Ensure OG image is absolute URL
   const ogImage = post.coverImage ?? "/images/og-default.svg";

@@ -21,9 +21,9 @@ export async function generateMetadata({
 
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL?.startsWith("http")
     ? process.env.NEXT_PUBLIC_SITE_URL
-    : undefined;
+    : "https://doeshing.one";
 
-  const url = baseUrl ? `${baseUrl}/projects/${project.slug}` : undefined;
+  const url = `${baseUrl}/projects/${project.slug}`;
 
   // Ensure OG image is absolute URL
   const ogImage = project.frontmatter.image ?? "/images/og-default.svg";
