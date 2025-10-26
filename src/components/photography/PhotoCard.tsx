@@ -22,7 +22,7 @@ export function PhotoCard({ collection }: PhotoCardProps) {
         : "aspect-[3/2]";
 
   return (
-    <article className="group relative mb-6 overflow-hidden rounded-sm border border-black/10 bg-black/5 transition-transform duration-500 ease-out hover:-translate-y-1 dark:border-white/10 dark:bg-white/5">
+    <article className="group relative mb-6 overflow-hidden rounded-sm border border-black/10 bg-black/5 transition-shadow duration-300 ease-out hover:shadow-editorial dark:border-white/10 dark:bg-white/5">
       <Link
         href={`/gallery/${collection.slug}`}
         className="relative block overflow-hidden"
@@ -33,7 +33,7 @@ export function PhotoCard({ collection }: PhotoCardProps) {
             alt={frontmatter.title}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 45vw, 30vw"
-            className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
             priority={frontmatter.featured}
           />
         </div>
