@@ -103,133 +103,141 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const shareUrl = `${baseUrl}/archive/${post.slug}`;
 
   return (
-    <article className="grid gap-10 lg:grid-cols-[minmax(0,1fr),280px] overflow-hidden">
-      <div className="space-y-10 min-w-0">
-        <header className="space-y-6 border border-black/10 bg-white px-6 py-10 shadow-editorial dark:border-white/10 dark:bg-zinc-900">
-          <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.35em] text-newspaper-gray dark:text-zinc-400">
-            <span>
-              {formatDate(
-                post.publishedAt ?? post.createdAt,
-                "EEEE, MMMM d, yyyy",
-              )}
-            </span>
-            <span>&middot;</span>
-            <span>{post.readingTime}</span>
-            <span>&middot;</span>
-            <span>{post.views + 1} views</span>
-          </div>
-          <h1 className="break-words font-serif text-4xl tracking-tight text-newspaper-ink dark:text-zinc-50 sm:text-5xl">
-            {post.title}
-          </h1>
-          {post.excerpt ? (
-            <p className="text-base text-newspaper-gray dark:text-zinc-400">{post.excerpt}</p>
-          ) : null}
-          <div className="flex flex-wrap items-center gap-3">
-            {post.tags.map((tag) => (
-              <Badge key={tag.id} variant="outline">
-                {tag.name}
-              </Badge>
-            ))}
-          </div>
-        </header>
-
-        {post.coverImage && post.showCoverImage !== false ? (
-          <div className="relative w-full overflow-hidden border border-black/10 bg-white shadow-editorial dark:border-white/10 dark:bg-zinc-900">
-            <Image
-              src={post.coverImage}
-              alt={post.title}
-              width={1200}
-              height={630}
-              className="w-full h-auto"
-              priority
-            />
-          </div>
+    <article className="space-y-10 overflow-hidden">
+      <header className="space-y-6 border border-black/10 bg-white px-6 py-10 shadow-editorial dark:border-white/10 dark:bg-zinc-900">
+        <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.35em] text-newspaper-gray dark:text-zinc-400">
+          <span>
+            {formatDate(
+              post.publishedAt ?? post.createdAt,
+              "EEEE, MMMM d, yyyy",
+            )}
+          </span>
+          <span>&middot;</span>
+          <span>{post.readingTime}</span>
+          <span>&middot;</span>
+          <span>{post.views + 1} views</span>
+        </div>
+        <h1 className="break-words font-serif text-4xl tracking-tight text-newspaper-ink dark:text-zinc-50 sm:text-5xl">
+          {post.title}
+        </h1>
+        {post.excerpt ? (
+          <p className="text-base text-newspaper-gray dark:text-zinc-400">{post.excerpt}</p>
         ) : null}
+        <div className="flex flex-wrap items-center gap-3">
+          {post.tags.map((tag) => (
+            <Badge key={tag.id} variant="outline">
+              {tag.name}
+            </Badge>
+          ))}
+        </div>
+      </header>
 
-        <RenderedMarkdown
-          html={html}
-          className="break-words dropcap prose prose-lg prose-headings:font-serif prose-headings:tracking-tight prose-p:text-newspaper-gray prose-strong:text-newspaper-ink dark:prose-invert"
-        />
-
-        <ShareButtons url={shareUrl} title={post.title} />
-
-        <section className="space-y-6">
-          <SectionHeading
-            kicker="Related Reading"
-            title="You might also enjoy"
-            description="More dispatches on craft and process."
+      {post.coverImage && post.showCoverImage !== false ? (
+        <div className="relative w-full overflow-hidden border border-black/10 bg-white shadow-editorial dark:border-white/10 dark:bg-zinc-900">
+          <Image
+            src={post.coverImage}
+            alt={post.title}
+            width={1200}
+            height={630}
+            className="w-full h-auto"
+            priority
           />
-          <BlogGrid posts={related} featuredCount={RELATED_POSTS_FEATURED_COUNT} />
-        </section>
+        </div>
+      ) : null}
 
-        <nav className="flex flex-col gap-6 border border-black/10 bg-white px-6 py-6 dark:border-white/10 dark:bg-zinc-900 md:flex-row md:justify-between">
-          {adjacent.previous ? (
-            <Link
-              href={`/archive/${adjacent.previous.slug}`}
-              className="flex-1 text-left text-sm text-newspaper-gray transition hover:text-newspaper-ink dark:text-zinc-400 dark:hover:text-zinc-100"
-            >
-              <span className="text-xs font-semibold uppercase tracking-[0.3em] text-newspaper-accent dark:text-red-400">
-                Previous
-              </span>
-              <p className="mt-2 font-serif text-lg text-newspaper-ink dark:text-zinc-50">
-                {adjacent.previous.title}
-              </p>
-            </Link>
-          ) : (
-            <div className="flex-1 text-xs uppercase tracking-[0.3em] text-newspaper-gray dark:text-zinc-400">
-              Beginning of archive
-            </div>
-          )}
-          {adjacent.next ? (
-            <Link
-              href={`/archive/${adjacent.next.slug}`}
-              className="flex-1 text-right text-sm text-newspaper-gray transition hover:text-newspaper-ink dark:text-zinc-400 dark:hover:text-zinc-100"
-            >
-              <span className="text-xs font-semibold uppercase tracking-[0.3em] text-newspaper-accent dark:text-red-400">
-                Next
-              </span>
-              <p className="mt-2 font-serif text-lg text-newspaper-ink dark:text-zinc-50">
-                {adjacent.next.title}
-              </p>
-            </Link>
-          ) : (
-            <div className="flex-1 text-right text-xs uppercase tracking-[0.3em] text-newspaper-gray dark:text-zinc-400">
-              Fresh ink coming soon
-            </div>
-          )}
-        </nav>
+      {/* Mobile TOC - collapsible, below hero */}
+      <div className="lg:hidden">
+        <TableOfContents items={toc ?? []} collapsible defaultOpen={false} />
       </div>
 
-      <div className="flex flex-col gap-6">
-        <TableOfContents items={toc ?? []} />
-        <div className="top-32 space-y-6">
-          <div className="border border-black/10 bg-white px-6 py-6 dark:border-white/10 dark:bg-zinc-900">
-            <span className="text-xs font-semibold uppercase tracking-[0.35em] text-newspaper-gray dark:text-zinc-400">
-              Author
-            </span>
-            <div className="mt-4 flex items-start gap-4">
-              {post.author.avatar ? (
-                <Image
-                  src={post.author.avatar}
-                  alt={post.author.name}
-                  width={64}
-                  height={64}
-                  className="rounded-full border-2 border-black/10 dark:border-white/10"
-                />
-              ) : null}
-              <div className="flex-1">
-                <p className="font-serif text-lg text-newspaper-ink dark:text-zinc-50">
-                  {post.author.name}
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr),280px]">
+        <div className="space-y-10 min-w-0">
+
+          <RenderedMarkdown
+            html={html}
+            className="break-words dropcap prose prose-lg prose-headings:font-serif prose-headings:tracking-tight prose-p:text-newspaper-gray prose-strong:text-newspaper-ink dark:prose-invert"
+          />
+
+          <ShareButtons url={shareUrl} title={post.title} />
+
+          <section className="space-y-6">
+            <SectionHeading
+              kicker="Related Reading"
+              title="You might also enjoy"
+              description="More dispatches on craft and process."
+            />
+            <BlogGrid posts={related} featuredCount={RELATED_POSTS_FEATURED_COUNT} />
+          </section>
+
+          <nav className="flex flex-col gap-6 border border-black/10 bg-white px-6 py-6 dark:border-white/10 dark:bg-zinc-900 md:flex-row md:justify-between">
+            {adjacent.previous ? (
+              <Link
+                href={`/archive/${adjacent.previous.slug}`}
+                className="flex-1 text-left text-sm text-newspaper-gray transition hover:text-newspaper-ink dark:text-zinc-400 dark:hover:text-zinc-100"
+              >
+                <span className="text-xs font-semibold uppercase tracking-[0.3em] text-newspaper-accent dark:text-red-400">
+                  Previous
+                </span>
+                <p className="mt-2 font-serif text-lg text-newspaper-ink dark:text-zinc-50">
+                  {adjacent.previous.title}
                 </p>
-                {post.author.bio ? (
-                  <p className="mt-2 text-sm text-newspaper-gray dark:text-zinc-400">
-                    {post.author.bio}
-                  </p>
+              </Link>
+            ) : (
+              <div className="flex-1 text-xs uppercase tracking-[0.3em] text-newspaper-gray dark:text-zinc-400">
+                Beginning of archive
+              </div>
+            )}
+            {adjacent.next ? (
+              <Link
+                href={`/archive/${adjacent.next.slug}`}
+                className="flex-1 text-right text-sm text-newspaper-gray transition hover:text-newspaper-ink dark:text-zinc-400 dark:hover:text-zinc-100"
+              >
+                <span className="text-xs font-semibold uppercase tracking-[0.3em] text-newspaper-accent dark:text-red-400">
+                  Next
+                </span>
+                <p className="mt-2 font-serif text-lg text-newspaper-ink dark:text-zinc-50">
+                  {adjacent.next.title}
+                </p>
+              </Link>
+            ) : (
+              <div className="flex-1 text-right text-xs uppercase tracking-[0.3em] text-newspaper-gray dark:text-zinc-400">
+                Fresh ink coming soon
+              </div>
+            )}
+          </nav>
+        </div>
+
+        <aside className="hidden flex-col gap-6 lg:flex">
+          <TableOfContents items={toc ?? []} />
+          <div className="top-32 space-y-6">
+            <div className="border border-black/10 bg-white px-6 py-6 dark:border-white/10 dark:bg-zinc-900">
+              <span className="text-xs font-semibold uppercase tracking-[0.35em] text-newspaper-gray dark:text-zinc-400">
+                Author
+              </span>
+              <div className="mt-4 flex items-start gap-4">
+                {post.author.avatar ? (
+                  <Image
+                    src={post.author.avatar}
+                    alt={post.author.name}
+                    width={64}
+                    height={64}
+                    className="rounded-full border-2 border-black/10 dark:border-white/10"
+                  />
                 ) : null}
+                <div className="flex-1">
+                  <p className="font-serif text-lg text-newspaper-ink dark:text-zinc-50">
+                    {post.author.name}
+                  </p>
+                  {post.author.bio ? (
+                    <p className="mt-2 text-sm text-newspaper-gray dark:text-zinc-400">
+                      {post.author.bio}
+                    </p>
+                  ) : null}
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </aside>
       </div>
     </article>
   );

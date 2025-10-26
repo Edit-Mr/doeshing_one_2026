@@ -127,6 +127,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </div>
       ) : null}
 
+      {/* Mobile TOC - collapsible, below hero */}
+      <div className="lg:hidden">
+        <TableOfContents items={toc ?? []} collapsible defaultOpen={false} />
+      </div>
+
       <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr),280px]">
         <div className="min-w-0 overflow-x-hidden">
           <RenderedMarkdown
@@ -134,7 +139,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             className="dropcap prose prose-lg prose-headings:font-serif prose-headings:tracking-tight prose-p:text-newspaper-gray dark:prose-invert"
           />
         </div>
-        <aside className="space-y-6">
+        <aside className="hidden space-y-6 lg:block">
           <TableOfContents items={toc ?? []} />
           <div className="border border-black/10 bg-white px-6 py-6 text-sm text-newspaper-gray dark:border-white/10 dark:bg-zinc-900 dark:text-zinc-400">
             <p>

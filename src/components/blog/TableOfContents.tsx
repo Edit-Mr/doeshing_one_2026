@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 interface TocItem {
   id: string;
   text: string;
@@ -8,9 +10,13 @@ interface TocItem {
 
 interface TableOfContentsProps {
   items: TocItem[];
+  collapsible?: boolean;
+  defaultOpen?: boolean;
 }
 
-export function TableOfContents({ items }: TableOfContentsProps) {
+export function TableOfContents({ items, collapsible = false, defaultOpen = true }: TableOfContentsProps) {
+  const [isOpen, setIsOpen] = useState(defaultOpen);
+
   if (!items || items.length === 0) return null;
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -42,10 +48,27 @@ export function TableOfContents({ items }: TableOfContentsProps) {
     <div
       className="min-w-[220px] border border-black/10 bg-white px-6 py-6 dark:border-white/10 dark:bg-zinc-900"
     >
-      <p className="text-xs font-semibold uppercase tracking-[0.35em] text-newspaper-gray dark:text-zinc-400">
-        Contents
-      </p>
-      <nav className="mt-4 space-y-2 text-sm">
+      {collapsible ? (
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="flex w-full items-center justify-between text-xs font-semibold uppercase tracking-[0.35em] text-newspaper-gray dark:text-zinc-400"
+        >
+          <span>Contents</span>
+          <svg
+            className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+      ) : (
+        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-newspaper-gray dark:text-zinc-400">
+          Contents
+        </p>
+      )}
+      <nav className={`mt-4 space-y-2 text-sm ${collapsible && !isOpen ? 'hidden' : ''}`}>
         {items.map((item) => (
           <a
             key={item.id}
