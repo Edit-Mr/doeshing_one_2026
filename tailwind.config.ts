@@ -23,9 +23,8 @@ const config: Config = {
       },
       fontFamily: {
         serif: [
-          "GenRyuMin JP Auto",
-          "GenRyuMin TW Auto",
-          "var(--font-genryumin)",
+          "GenRyuMinTW",
+          "GenRyuMinJP",
           "Playfair Display",
           "Merriweather",
           "serif",

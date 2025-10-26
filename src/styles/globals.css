@@ -1,10 +1,14 @@
+@import url("https://font.emtech.cc/css/GenRyuMinJP");
+@import url("https://font.emtech.cc/css/GenRyuMinTW");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+
   :root {
-    --font-serif: var(--font-genryumin), "Playfair Display", "Merriweather", "GenRyuMin JP Auto", "GenRyuMin TW Auto", serif;
+    --font-serif: "GenRyuMinTW", "GenRyuMinJP", "Playfair Display", "Merriweather", "GenRyuMin JP Auto", "GenRyuMin TW Auto", serif;
     --font-sans: "Inter", "Roboto", sans-serif;
     --font-mono: var(--font-fira-code), monospace;
     --color-ink: #1a1a1a;
@@ -46,7 +50,7 @@
 
   /* Japanese content uses Japanese font variant */
   :lang(ja) {
-    font-family: var(--font-genryumin-jp), var(--font-genryumin), "Playfair Display", "Merriweather", serif;
+    font-family: "GenRyuMinJP", "GenRyuMinTW", "Playfair Display", "Merriweather", serif;
   }
 
   /* Ensure CJK characters render properly */
@@ -147,100 +151,6 @@
       );
   }
 }
-
-/* Auto-detect Japanese characters using @font-face with unicode-range */
-/* Japanese Hiragana, Katakana unicode-range: U+3040-309F, U+30A0-30FF */
-@font-face {
-  font-family: "GenRyuMin JP Auto";
-  src: url("/fonts/GenRyuMin2JP-woff2/GenRyuMin2JP-L.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+3040-309F, U+30A0-30FF;
-}
-
-@font-face {
-  font-family: "GenRyuMin JP Auto";
-  src: url("/fonts/GenRyuMin2JP-woff2/GenRyuMin2JP-R.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+3040-309F, U+30A0-30FF;
-}
-
-@font-face {
-  font-family: "GenRyuMin JP Auto";
-  src: url("/fonts/GenRyuMin2JP-woff2/GenRyuMin2JP-M.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+3040-309F, U+30A0-30FF;
-}
-
-@font-face {
-  font-family: "GenRyuMin JP Auto";
-  src: url("/fonts/GenRyuMin2JP-woff2/GenRyuMin2JP-SB.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+3040-309F, U+30A0-30FF;
-}
-
-@font-face {
-  font-family: "GenRyuMin JP Auto";
-  src: url("/fonts/GenRyuMin2JP-woff2/GenRyuMin2JP-B.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+3040-309F, U+30A0-30FF;
-}
-
-/* Traditional Chinese - will match all CJK characters not in Japanese range */
-@font-face {
-  font-family: "GenRyuMin TW Auto";
-  src: url("/fonts/GenRyuMin2TW-woff2/GenRyuMin2TW-L.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+2E80-2EFF, U+3000-303F, U+31C0-31EF, U+3200-32FF, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF;
-}
-
-@font-face {
-  font-family: "GenRyuMin TW Auto";
-  src: url("/fonts/GenRyuMin2TW-woff2/GenRyuMin2TW-R.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+2E80-2EFF, U+3000-303F, U+31C0-31EF, U+3200-32FF, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF;
-}
-
-@font-face {
-  font-family: "GenRyuMin TW Auto";
-  src: url("/fonts/GenRyuMin2TW-woff2/GenRyuMin2TW-M.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+2E80-2EFF, U+3000-303F, U+31C0-31EF, U+3200-32FF, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF;
-}
-
-@font-face {
-  font-family: "GenRyuMin TW Auto";
-  src: url("/fonts/GenRyuMin2TW-woff2/GenRyuMin2TW-SB.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+2E80-2EFF, U+3000-303F, U+31C0-31EF, U+3200-32FF, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF;
-}
-
-@font-face {
-  font-family: "GenRyuMin TW Auto";
-  src: url("/fonts/GenRyuMin2TW-woff2/GenRyuMin2TW-B.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+2E80-2EFF, U+3000-303F, U+31C0-31EF, U+3200-32FF, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF;
-}
-
 
 @layer components {
   a {
