@@ -33,9 +33,7 @@ export async function generateMetadata({
       description: project.frontmatter.description,
       type: "article",
       url,
-      images: project.frontmatter.image
-        ? [{ url: project.frontmatter.image }]
-        : undefined,
+      images: [{ url: project.frontmatter.image ?? "/images/og-default.svg" }],
     },
     alternates: {
       canonical: url,

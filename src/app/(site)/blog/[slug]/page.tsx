@@ -49,9 +49,7 @@ export async function generateMetadata({
       url,
       publishedTime: post.publishedAt?.toISOString(),
       modifiedTime: post.updatedAt.toISOString(),
-      images: post.coverImage
-        ? [{ url: post.coverImage }]
-        : undefined,
+      images: [{ url: post.coverImage ?? "/images/og-default.svg" }],
     },
     alternates: {
       canonical: url,
