@@ -134,12 +134,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </header>
 
         {post.coverImage ? (
-          <div className="relative aspect-[21/9] w-full overflow-hidden border border-black/10 bg-white shadow-editorial dark:border-white/10 dark:bg-zinc-900">
+          <div className="relative w-full overflow-hidden border border-black/10 bg-white shadow-editorial dark:border-white/10 dark:bg-zinc-900">
             <Image
               src={post.coverImage}
               alt={post.title}
-              fill
-              className="object-cover"
+              width={1200}
+              height={630}
+              className="w-full h-auto"
               priority
             />
           </div>

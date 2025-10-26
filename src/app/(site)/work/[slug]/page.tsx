@@ -115,12 +115,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </header>
 
       {frontmatter.image ? (
-        <div className="relative aspect-[21/9] w-full overflow-hidden border border-black/10 bg-white shadow-editorial dark:border-white/10 dark:bg-zinc-900">
+        <div className="relative w-full overflow-hidden border border-black/10 bg-white shadow-editorial dark:border-white/10 dark:bg-zinc-900">
           <Image
             src={frontmatter.image}
             alt={frontmatter.title}
-            fill
-            className="object-cover"
+            width={1200}
+            height={630}
+            className="w-full h-auto"
             priority
           />
         </div>
