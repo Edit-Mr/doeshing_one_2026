@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SidebarAd } from "@/components/ads/SidebarAd";
@@ -199,14 +200,27 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <span className="text-xs font-semibold uppercase tracking-[0.35em] text-newspaper-gray dark:text-zinc-400">
               Author
             </span>
-            <p className="mt-2 font-serif text-lg text-newspaper-ink dark:text-zinc-50">
-              {post.author.name}
-            </p>
-            {post.author.bio ? (
-              <p className="mt-2 text-sm text-newspaper-gray dark:text-zinc-400">
-                {post.author.bio}
-              </p>
-            ) : null}
+            <div className="mt-4 flex items-start gap-4">
+              {post.author.avatar ? (
+                <Image
+                  src={post.author.avatar}
+                  alt={post.author.name}
+                  width={64}
+                  height={64}
+                  className="rounded-full border-2 border-black/10 dark:border-white/10"
+                />
+              ) : null}
+              <div className="flex-1">
+                <p className="font-serif text-lg text-newspaper-ink dark:text-zinc-50">
+                  {post.author.name}
+                </p>
+                {post.author.bio ? (
+                  <p className="mt-2 text-sm text-newspaper-gray dark:text-zinc-400">
+                    {post.author.bio}
+                  </p>
+                ) : null}
+              </div>
+            </div>
           </div>
         </div>
       </aside>
